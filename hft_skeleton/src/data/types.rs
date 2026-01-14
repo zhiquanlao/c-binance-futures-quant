@@ -20,22 +20,7 @@ pub struct BestBidAskTicks {
 pub struct OrderBookL2 {
     // Fast L2 book representation (vectorized levels, price->size maps, etc.).
     // Keep it cache-friendly and avoid allocations in the hot path.
-}
-
-impl OrderBookL2 {
-    pub fn update_level(&mut self, _side: Side, _px: Price, _qty: Volume) {
-        // Update a level using integer ticks and lots for comparison and ordering.
-    }
-
-    pub fn best_bid(&self) -> Option<(Price, Volume)> {
-        // Return best bid level using integer comparison of Price.
-        None
-    }
-
-    pub fn best_ask(&self) -> Option<(Price, Volume)> {
-        // Return best ask level using integer comparison of Price.
-        None
-    }
+    // Implementations should use integer comparisons on Price/Volume.
 }
 
 #[derive(Debug, Clone)]
