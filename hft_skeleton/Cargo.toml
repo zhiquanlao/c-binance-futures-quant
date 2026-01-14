@@ -1,0 +1,11 @@
+[package]
+name = "hft_skeleton"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+rtrb = "0.2"
+rustls = "0.21"
+serde = { version = "1", features = ["derive"] }
+webpki-roots = "0.25"
